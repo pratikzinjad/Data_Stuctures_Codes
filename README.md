@@ -1,4 +1,4 @@
-Data Structures in C for First-Year Engineering (Mumbai University)
+# Data Structures in C for First-Year Engineering (Mumbai University)
 
 
 Welcome to the Data Structures in C repository! This resource is specifically designed for first-year engineering students studying under the Mumbai University syllabus. The repository contains well-structured C programs that cover fundamental data structures, along with comments and explanations to help students learn effectively.
