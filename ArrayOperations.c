@@ -2,7 +2,7 @@
 #include<conio.h>
 void InsertAtbegin(int arr[],int *n,int val){
 int i;
-for(i=*n;i>=0;i--){arr[i+1]=arr[i];}
+for(i=*n-1;i>=0;i--){arr[i+1]=arr[i];}
 arr[0]=val;
 (*n)++;
 printf("Value inserted succesfully\n");
@@ -13,14 +13,14 @@ printf("Value inserted succesfully\n");
 }
 void InsertAtposition(int arr[],int *n,int val,int pos){
 int i;
-for(i=*n;i>=pos-1;i--){arr[i+1]=arr[i];}
+for(i=*n-1;i>=pos-1;i--){arr[i+1]=arr[i];}
 arr[pos-1]=val;
 (*n)++;
 printf("Value inserted succesfully\n");
 }
 void DeleteAtbegin(int arr[],int *n){
 int i;
-for(i=0;i<*n;i++){arr[i]=arr[i+1];}
+for(i=0;i<*n-1;i++){arr[i]=arr[i+1];}
 (*n)--;
 printf("Value deleted succesfully\n");
 }
@@ -30,7 +30,7 @@ printf("Value deleted succesfully\n");
 }
 void DeleteAtposition(int arr[],int *n,int pos){
 int i;
-for(i=pos-1;i<*n;i++){arr[i]=arr[i+1];}
+for(i=pos-1;i<*n-1;i++){arr[i]=arr[i+1];}
 (*n)--;
 printf("Value deleted succesfully\n");
 }
