@@ -137,13 +137,26 @@ temp=temp->next;
 count++;}
 temp->data=val;
 }
+
+void Reverse(struct node **head){
+struct node *prev,*next,*temp;
+temp=*head;
+prev=NULL;
+while(temp!=NULL){
+next=temp->next;
+temp->next=prev;
+prev=temp;
+temp=next;
+}
+*head=prev;
+}
 int main(){
 int choice,val,index,valnode;
 struct node *head=NULL;
 clrscr();
 printf("||Code for Singly Linked List||\n");
 do{
-printf("Operations can be done:\n1.Display\n2.Search\n3.InsertAtstart\n4.InsertAtend\n5.InsertAtindex\n6.InsertAftervalue\n7.InsertBeforevalue\n8.DeleteAtstart\n9.DeleteAtend\n10.DeleteAtindex\n11.DeleteAftervalue\n12.DeleteBeforevalue\n13.ChangeThevalue\n14.Exit");
+printf("Operations can be done:\n1.Display\n2.Search\n3.InsertAtstart\n4.InsertAtend\n5.InsertAtindex\n6.InsertAftervalue\n7.InsertBeforevalue\n8.DeleteAtstart\n9.DeleteAtend\n10.DeleteAtindex\n11.DeleteAftervalue\n12.DeleteBeforevalue\n13.ChangeThevalue\n14.Reverse a Linked list\n15.Exit");
 printf("\nEnter Your Choice:");
 scanf("%d",&choice);
 if(choice==1){  printf("Elements in the list are\t");
@@ -198,11 +211,15 @@ scanf("%d",&index);
 printf("Enter the value :");
 scanf("%d",&val);
 Changevalue(&head,index,val);}
-else if(choice==14){printf("Exit......");}
+else if(choice==14){
+Reverse(&head);
+printf("Reverse linked list:\n");
+Display(&head);
+}
+else if(choice==15){printf("Exit......");}
 else{printf("Invalid input.");}
 
-}while(choice!=14);
+}while(choice!=15);
 getch();
 return 0;
 }
-
