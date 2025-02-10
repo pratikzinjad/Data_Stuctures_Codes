@@ -9,7 +9,7 @@ do{
 printf("Operations can be done.\n1.Push\n2.pop\n3.Peek\n4.Exit\nEnter your choice:");
 scanf("%d",&choice);
 if(choice==1){
-if(sp==100-2){printf("Stack limit is 100.\n");}
+if(sp==100-1){printf("Stack limit is 100.\n");}
 else{sp++;
 printf("Enter the value to be push in the stack:");
 scanf("%d",&val);
